@@ -32,8 +32,6 @@ devtools::install_github("TongWu2022/ScGRADES")
 install.pakages("ScGRADES")
 ```
 
----
-
 ### Dependencies
 
 
