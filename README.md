@@ -5,15 +5,21 @@
 
 ## Installation
 
-### conda environment (recommended for Seurat-based workflows)
+### Conda environment
 
 ```bash
 # Create a conda environment with required R packages
 conda create -n scgrades_env r-base=4.1 r-seurat r-dplyr r-tibble r-purrr r-optparse r-ggplot2 -c conda-forge -c bioconda
 conda activate scgrades_env
 ```
+### Install from CRAN
 
-### Local installation from GitHub
+```r
+#Install R package
+install.pakages("ScGRADES")
+```
+
+### Install from GitHub
 
 ```r
 # Install devtools if not already
@@ -24,17 +30,6 @@ devtools::install_github("TongWu2022/ScGRADES")
 
 #Install R package
 install.pakages("ScGRADES")
-```
-
-### For development:
-
-```bash
-git clone https://github.com/TongWu2022/ScGRADES.git
-```
-
-```r
-setwd("path/to/ScGRADES")
-devtools::load_all()
 ```
 
 ---
@@ -74,10 +69,10 @@ Seurat_obj <- IdentifyCoreCells(seurat_obj, dist = dist_mat, top_n = 20, resolut
 
 ## Output
 
-- Adds a `CellClass` column to `seurat_obj@meta.data`, labeling cells as:
-  - `Core-cell`: all top-N neighbors consistently cluster together across resolutions
-  - `Middle-cell`: partial consistency
-  - `Marginal-cell`: inconsistent neighbors
+- Adds a `CellPopulation` column to `seurat_obj@meta.data`, labeling cells as:
+  - `core cell`: clusters are clear and consistent
+  - `middle cell`: clusters are partially clear
+  - `marginal cell`: clusters are unclear
 
 
 ---
