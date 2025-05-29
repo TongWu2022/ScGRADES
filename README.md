@@ -34,16 +34,13 @@ install.pakages("ScGRADES")
 
 ---
 
-## Dependencies
+### Dependencies
 
-### R packages:
 
-- Seurat (≥ 4.0)
-- dplyr
-- purrr
-- tibble
-- optparse
-- ggplot2
+```r
+# R packages:
+Seurat (≥ 4.0), dplyr, purrr, tibble, optparse, ggplot2
+```
 
 ---
 
